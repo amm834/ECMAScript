@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>013 - If Else Else If</title>
+</head>
+<body>
+  <div id="demo">
+  </div>
+  <script type="text/javascript" charset="utf-8">
+    let currentTime = new Date().getHours();
+    let text;
+    if (currentTime >= 18 && currentTime <= 20) {
+      text = "Good Evening!";
+    } else if (currentTime >= 23) {
+      text = "Near To Sleep";
+    } else {
+      text = "Sleeping";
+    }
+    document.getElementById('demo').innerHTML = text;
+  </script>
+</body>
+</html>
