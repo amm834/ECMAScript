@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Create Element</title>
+</head>
+<body>
+  <button id="btn">Click Me</button>
+  <ul id="ulist">
+    <li>Hello World</li>
+    <li>Hi World</li>
+    <li>LoL World</li>
+  </ul>
+  <script type="text/javascript" charset="utf-8">
+    let btn = document.getElementById('btn');
+    let makeList = document.createElement("li");
+    let makeText = document.createTextNode("Mingalarpar World!");
+    btn.addEventListener('click', function() {
+      let myList = document.getElementById("ulist");
+      myList.appendChild(makeList).appendChild(makeText);
+    })
+  </script>
+</body>
+</html>
