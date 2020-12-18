@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Form Validation</title>
+</head>
+<body>
+  <form name="myForm">
+    <label for=""></label>
+    <input type="text" name="fullname" />
+    <button type="submit" onclick="checkFullName()">Submit</button>
+  </form>
+<script type="text/javascript" charset="utf-8">
+  function checkFullName() {
+    let name = document.forms['myForm']['fullname'].value;
+    if(name == ''){
+     return alert('Name Required!');
+    }
+    document.writeln('Your name is '+name);
+  }
+</script>
+</body>
+</html>
