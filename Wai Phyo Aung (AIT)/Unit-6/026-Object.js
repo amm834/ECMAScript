@@ -31,3 +31,6 @@ let person1 = new Person('AMM','amm@gmail.com');
 let person2 = new Person('AMM2','amm2@gmail.com');
 console.log(person1);
 console.log(person2);
+
+delete person2.name;
+console.log(person2);
