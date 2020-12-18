@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Numeric Input Validation</title>
+</head>
+<body>
+  <p>Type Number between 1 and 100.</p>
+  <input type="number" id="usrInput"/>
+  <button onclick="validate()">Submit</button>
+  <p id="msg"></p>
+  <script type="text/javascript" charset="utf-8">
+    function validate() {
+      let data,message;
+       data = document.getElementById('usrInput').value;
+       if(isNaN(data) || data < 1 || data > 100){
+         message = 'Number should between 1 and 100.';
+       }else{
+         message = "Congrats!"
+       }
+       document.getElementById('msg').innerHTML = message;
+    }
+  </script>
+</body>
+</html>
