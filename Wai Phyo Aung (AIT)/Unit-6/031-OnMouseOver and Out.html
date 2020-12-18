@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mouse Over And Mouse Out</title>
+</head>
+<body>
+  <p onmouseover="mOver(this)" onmouseout="mOut(this)">
+    Place Move Over Me
+  </p>
+  <script type="text/javascript" charset="utf-8">
+    function mOver(element) {
+      element.innerHTML = "Away Mouse From Me";
+    }
+    function mOut(element) {
+      element.innerHTML = "Place Move Over Me";
+    }
+  </script>
+</body>
+</html>
