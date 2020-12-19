@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Check Validity</title>
+</head>
+<body>
+  <input type="number" id="userInput" min="1" max="100" required/>
+  <button onclick="checkData()">Submit</button>
+  <p id="demo"></p>
+  <script type="text/javascript" charset="utf-8">
+    function checkData() {
+      let userInput = document.getElementById('userInput');
+      if (!userInput.checkValidity()) {
+        document.getElementById('demo').innerHTML = userInput.validationMessage;
+      } else {
+        document.getElementById('demo').innerHTML = "Success";
+      }
+    }
+  </script>
+</body>
+</html>
