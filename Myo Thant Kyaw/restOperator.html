@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="dist/eruda.js" type="text/javascript" charset="utf-8">
+  </script>
+  <script>
+    eruda.init();
+  </script>
+  <title>Rest</title>
+</head>
+<body>
+  <script>
+    function addition(...nums) {
+      for (x of nums) {
+        console.log(x)
+      }
+    }
+    addition(1, 2, 3);
+    const [fruit1,fruit2] = ["apple","orange"];
+    console.log(fruit1,fruit2);
+    const {name,age} = {
+      name:'amm',age:17
+    };
+    console.log(name,age)
+  </script>
+</body>
+</html>

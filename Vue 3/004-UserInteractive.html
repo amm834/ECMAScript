@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue</title>
+  <script src="dist/eruda.js" type="text/javascript" charset="utf-8"></script>
+  <script>
+    eruda.init();
+  </script>
+</head>
+<body>
+  <div id="app">
+    <p>
+      {{text}}
+    </p>
+    <button v-on:click="reverseMe">Reverse Me</button>
+  </div>
+  <script src="dist/vue.js"></script>
+  <script src="app.js"></script>
+  <script>
+    const App = {
+      data() {
+        return {
+          text: 'Hello World'
+        }
+      },
+      methods: {
+        reverseMe() {
+          this.text = this.text.split('').reverse().join('');
+        }
+      }
+    };
+    Vue.createApp(App).mount('#app');
+  </script>
+</body>
+</html>
