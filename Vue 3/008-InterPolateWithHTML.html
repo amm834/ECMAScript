@@ -6,12 +6,25 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Vue</title>
   <script src="dist/eruda.js" type="text/javascript" charset="utf-8"></script>
-  <script>eruda.init();</script>
+  <script>
+    eruda.init();
+  </script>
 </head>
 <body>
-<div id="app">
-</div>
-<script src="dist/vue.js"></script>
-<script src="app.js"></script>
+  <div id="app">
+    <span v-html="html">
+    </span>
+  </div>
+  <script src="dist/vue.js"></script>
+  <script src="app.js"></script>
+  <script>
+    Vue.createApp({
+      data() {
+        return {
+          html: `<span style="color:lightgreen">Light Green Color Will Appear</span>`
+        }
+      }
+    }).mount('#app')
+  </script>
 </body>
 </html>
