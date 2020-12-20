@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue</title>
+  <script src="dist/eruda.js" type="text/javascript" charset="utf-8"></script>
+  <script>eruda.init();</script>
+</head>
+<body>
+<div id="app">
+  <ol>
+    <li v-for="(value,name,index)  in catObj">
+      {{index}} : {{name}} : {{value}}
+    </li>
+  </ol>
+</div>
+<script src="dist/vue.js"></script>
+<script src="app.js"></script>
+<script>
+  Vue.createApp({
+    data(){
+      return {
+        catObj:{
+          name:'NooSi',
+          age:10,
+          hasManyWives:true
+        }
+      }
+    }
+  }).mount('#app');
+</script>
+</body>
+</html>
