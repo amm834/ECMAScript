@@ -14,18 +14,24 @@
   <div id="app">
     {{inputText}}
     <br>
-    <input type="text" v-model="inputText" placeholder="FullName"/>
+    <input type="text" v-model="inputText" placeholder="FullName" /><br>
+    <p style="white-space:pre-line;">
+      {{textAreaContent}}
+    </p>
+    <br>
+    <textarea v-model="textAreaContent"></textarea>
   </div>
   <script src="dist/vue.js"></script>
   <script src="app.js"></script>
   <script>
-Vue.createApp({
-  data(){
-    return {
-      inputText:''
-    }
-  }
-}).mount('#app');
+    Vue.createApp({
+      data() {
+        return {
+          inputText: '',
+          textAreaContent: ''
+        }
+      }
+    }).mount('#app');
   </script>
 </body>
 </html>
