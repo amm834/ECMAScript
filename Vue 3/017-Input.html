@@ -20,6 +20,24 @@
     </p>
     <br>
     <textarea v-model="textAreaContent"></textarea>
+    <br>
+    <select v-model="selected">
+      <option v-for="option in options" v-bind:value="option.value">
+        {{option.text}}
+      </option>
+    </select>
+    <p>
+      {{selected}}
+    </p>
+    <p>{{checkedOptions}}</p>
+    <div>
+      <input type="checkbox" v-model="checkedOptions" value="Male" id="male"/>
+      <label for="male">Male</label>
+    </div>
+    <div>
+      <input type="checkbox" v-model="checkedOptions" value="FeMale" id="female"/>
+      <label for="female">Female</label>
+    </div>
   </div>
   <script src="dist/vue.js"></script>
   <script src="app.js"></script>
@@ -28,7 +46,15 @@
       data() {
         return {
           inputText: '',
-          textAreaContent: ''
+          textAreaContent: '',
+          selected: '',
+          options: [{
+            text: 'From amm', value: 'Aung Myat Moe'
+          },
+            {
+              text: 'From tts', value: 'Than Than Swe'
+            }],
+            checkedOptions:[]
         }
       }
     }).mount('#app');
