@@ -29,15 +29,26 @@
     <p>
       {{selected}}
     </p>
-    <p>{{checkedOptions}}</p>
+    <p>
+      {{checkedOptions}}
+    </p>
     <div>
-      <input type="checkbox" v-model="checkedOptions" value="Male" id="male"/>
+      <input type="checkbox" v-model="checkedOptions" value="Male" id="male" />
       <label for="male">Male</label>
     </div>
     <div>
-      <input type="checkbox" v-model="checkedOptions" value="FeMale" id="female"/>
+      <input type="checkbox" v-model="checkedOptions" value="FeMale" id="female" />
       <label for="female">Female</label>
     </div>
+    <div>
+      <input type="radio"  id="game" v-model="radioBtnPicked" value="Game"/>
+      <label for="game" >Game</label>
+    </div>
+    <div>
+      <input type="radio"  id="program" v-model="radioBtnPicked" value="Programming"/>
+      <label for="program">Programming</label>
+    </div>
+    <div>{{radioBtnPicked}}</div>
   </div>
   <script src="dist/vue.js"></script>
   <script src="app.js"></script>
@@ -54,7 +65,8 @@
             {
               text: 'From tts', value: 'Than Than Swe'
             }],
-            checkedOptions:[]
+          checkedOptions: [],
+          radioBtnPicked:''
         }
       }
     }).mount('#app');
