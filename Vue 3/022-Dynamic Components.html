@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Vue</title>
+ <script src="dist/eruda.js" type="text/javascript" charset="utf-8"></script>
+ <script>
+  eruda.init();
+ </script>
+ <style>
+  .btn{
+   background: #ddd;
+  }
+  .btn.active{
+   background: #f80;
+  }
+ </style>
+</head>
+<body>
+ <div id="app">
+  <button 
+  v-for="(tab,index) in tabs"
+  @click="currentTab = tab"
+  :key="index"
+  :class="['btn',{'active':currentTab === tab}]"
+  >
+   {{tab}}
+  </button>
+  <component :is="showCurrentTab"></component>
+ </div>
+ <script src="dist/vue.js"></script>
+ <script src="app.js"></script>
+ <script>
+  const app = Vue.createApp({
+   data() {
+    return {
+     currentTab:'home',
+     tabs: ['Home', 'Contact', 'About']
+    }
+   },
+   computed:{
+    showCurrentTab(){
+     return 'tab-'+this.currentTab.toLowerCase()
+    }
+   }
+  });
+  app.component('tab-home', {
+   template: `I am home page.`
+  })
+  app.component('tab-contact', {
+   template: `I am contact page.`
+  })
+  app.component('tab-about', {
+   template: `I am about page.`
+  })
+  app.mount('#app');
+ </script>
+</body>
+</html>
