@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Vue</title>
-  <script src="dist/eruda.js" type="text/javascript" charset="utf-8"></script>
-  <script>eruda.init();</script>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Vue</title>
+ <script src="dist/eruda.js" type="text/javascript" charset="utf-8"></script>
+ <script>
+  eruda.init();
+ </script>
 </head>
 <body>
-<div id="app">
-</div>
-<script src="dist/vue.js"></script>
-<script src="app.js"></script>
+ <div id="app">
+  <cards-component
+   v-for="card in cards"
+   :title="card.title"
+   :link="card.link"
+   :text="card.text"
+   >
+  </cards-component>
+ </div>
+ <script src="dist/vue.js"></script>
+ <script src="app.js"></script>
 </body>
 </html>

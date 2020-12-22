@@ -1,4 +1,4 @@
-Vue.createApp({
+const app = Vue.createApp({
  data() {
   return {
    cards: [
@@ -27,6 +27,7 @@ Vue.createApp({
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni ratione molestiae aperiam autem beatae unde vel. Libero consectetur consequatur iste perferendis, ea numquam, distinctio fuga, quae vitae eligendi debitis vel!'
    },
    ]
-  }
+  };
  }
-})
+});
+app.mount('#app');
