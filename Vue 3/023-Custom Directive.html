@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Vue</title>
+ <script src="dist/eruda.js" type="text/javascript" charset="utf-8"></script>
+ <script>
+  eruda.init();
+ </script>
+</head>
+<body>
+ <div id="app">
+  <input v-focus>
+ </div>
+ <script src="dist/vue.js"></script>
+ <script src="app.js"></script>
+ <script>
+  const app = Vue.createApp({});
+  app.directive('focus', {
+   mounted(el) {
+    el.focus();
+   }
+  })
+  app.mount('#app');
+ </script>
+</body>
+</html>
